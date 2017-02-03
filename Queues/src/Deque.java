@@ -4,12 +4,7 @@ import java.util.NoSuchElementException;
 public class Deque<Item> implements Iterable<Item> {
 		   private SNode s;
 		   
-		   public  Item theFirst(){
-			   return s.next.item;
-		   }
-		   public  Item theLast(){
-			   return s.prev.item;
-		   }
+		  
 		  //Model for Node creation
 		   private class Node{
 			  private Item item;
@@ -125,8 +120,6 @@ public class Deque<Item> implements Iterable<Item> {
 		   
 		   
 		   public static void main(String[] args)  {
-			   
-			   
 			  
 				   
 			   
