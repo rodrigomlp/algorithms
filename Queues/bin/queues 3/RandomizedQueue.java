@@ -69,11 +69,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
    // an iterator, doesn't implement remove() since it's optional
    private class ReverseArrayIterator implements Iterator<Item> {
        private int i;
-       private Item[] array;
-       
-       public ReverseArrayIterator() {
 
-	   array = Arrays.copyOf(a, a.length);
+       public ReverseArrayIterator() {
     	   StdRandom.shuffle(a, 0, n);
     	   
            i = n-1;
@@ -89,7 +86,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
        public Item next() {
            if (!hasNext()) throw new NoSuchElementException();
-           return array[i--];
+           return a[i--];
        }
    }
    // resize the underlying array holding the elements
